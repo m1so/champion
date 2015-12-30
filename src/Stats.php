@@ -24,8 +24,13 @@ class Stats
         return Client::get("stats/role/${role}/${flag}", $page, $limit);
     }
 
-    public static function byChampion($champion, $flag = "", $page = null, $limit = null)
+    public static function byChampion($champion)
     {
-        return Client::get("stats/champs/${champion}/${flag}", $page, $limit);
+        return Client::get("stats/champs/${champion}");
+    }
+
+    public static function champs($flag, $page = 1, $limit = 10)
+    {
+        return Client::get("stats/champs/${flag}", $page, $limit);
     }
 }
