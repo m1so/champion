@@ -9,10 +9,28 @@ Require this package using composer
 The internal API of this package may change, use at own risk
 
 **Todo:**
+- Exception handling
+- More examples and usecases
 - Add tests
 
 # Documentation
-Overview of all methods and endpoints with examples.
+Overview of all methods and endpoints with examples.  
+
+## Usage
+Set you API key using
+```php
+use Champion\ChampionAPI;
+// ...
+ChampionAPI::setKey($yourKeyHere);
+```
+Always remember to `use` or fully qualify the namespace
+```php
+use Champion\Stats;
+// ...
+$stats = Stats::byRole('Top');
+// or
+$stats = \Champion\Stats::byRole('Top');
+```
 
 ## Champion specific
 List of all endpoints and methods that are specific to a given champion.
