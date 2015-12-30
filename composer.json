@@ -1,0 +1,23 @@
+{
+    "name": "m1so/champion",
+    "description": "Champion.gg API wrapper written in PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michal Baumgartner",
+            "email": "michal@baumgartner.io"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Champion\\": "src/"
+        }
+    }
+}
