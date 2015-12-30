@@ -24,9 +24,14 @@ class Champion
         return Client::get("champion/{$this->champion}/summoners/${flag}");
     }
 
+    public function runes($flag = self::CHAMPION_MOST_POPULAR)
+    {
+        return Client::get("champion/{$this->champion}/runes/${flag}");
+    }
+
     public function startingItems($flag = self::CHAMPION_MOST_POPULAR)
     {
-        return Client::get("champion/{$this->champion}/starters/${flag}");
+        return Client::get("champion/{$this->champion}/items/starters/${flag}");
     }
 
     public function skills($flag = "")
@@ -36,12 +41,12 @@ class Champion
 
     public function items($flag = self::CHAMPION_MOST_POPULAR)
     {
-        return Client::get("champion/{$this->champion}/finished/${flag}");
+        return Client::get("champion/{$this->champion}/items/finished/{$flag}");
     }
 
     public function matchups()
     {
-        return Client::get("champion/{$this->champion}/matchups");
+        return Client::get("champion/{$this->champion}/matchup");
     }
 
     public function general()

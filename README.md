@@ -150,7 +150,7 @@ $name = 'Top';
 $page = 1; 
 $limit = 10;
 
-$stats = Stats::byRole($name, $page, $limit);
+$stats = Stats::byRole($name);
 // We can also specify the flag:
 $statsMostImproved  = Stats::byRole($name, Stats::ROLE_MOST_IMPROVED, $page, $limit);
 $statsLeastImproved = Stats::byRole($name, Stats::ROLE_LEAST_IMPROVED, $page, $limit);
